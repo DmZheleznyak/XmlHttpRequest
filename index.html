@@ -10,16 +10,21 @@
 
 	<div class="container">
 		<div class="form-group">
-			<input type="file" class="form-control-file" id="exampleFormControlFile1">
+			<form name="upload" enctype="multipart/form-data" method="post" action='http://localhost:8000/upload'> 
+				<input type="file" class="form-control-file" id="fileItem">
+				<input type="submit" value="Upload">
+			</form>
 		</div>
 		
 		<div class="progress">
-			<div class="progress-bar" style="width:80%"></div>
+			<div class="progress-bar" style="width:30%"></div>
 		</div>
 	</div>
 	
+	<div id="log">Прогресс загрузки</div>
+	
 </body>
-<script src="/progress.js" ></script>
+<script src="/progress.js"></script>
 </html>
 
 <!-- <form ref='uploadForm' 
